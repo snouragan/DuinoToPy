@@ -6,6 +6,12 @@ void setup() {
 }
 
 void loop() {
-  Serial.println("alo");
-  delay(1000);
+  Serial.println("alo");  
+  if(Serial.available() > 0) {
+    String data = Serial.readStringUntil('\n');
+    Serial.println(data);
+  }
+
+
+
 }
